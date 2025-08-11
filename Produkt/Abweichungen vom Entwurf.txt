@@ -1,0 +1,108 @@
+
+Dies ist eine Auflistung der "Daten" die wir innerhalb unserer Klassen benutzt haben, wir waren uns unsicher in welchem format wir sie aufführen wollen, deswegen eine Liste and allen Daten die zu finden sind, ausgenommen die Controller.
+
+Neue Produktdaten:
+
+    private String username;
+    private String password;
+    private int wins;
+    public String sender;
+    public String content;
+    private final String id;
+    private String room_name;
+    private String player_1;
+    private String player_2;
+    private String player_3;
+    private final List<PlayerDTO> players;
+    private final int currentPlayerIndex;
+    private final boolean isactive;
+    private String username;
+    private int wins;
+    private final String name;
+    private final List<CardDTO> hand;
+    private final int points;
+    private final int winPoints;
+    private final List<CardDTO> validMoves;
+    private static ServerContext instance;
+    public List<Account> accounts;
+    public List<Account> logged_in = new ArrayList<>();
+    public String lobby_chat = "";
+    public Map<String, Spiel> spiele = new HashMap<>();
+    public final Map<String, List<String>> chatVerlauf = new HashMap<>();
+    public final Map<String, List<Spieler>> spielraeume = new HashMap<>();
+    public final Map<String, String> passwoerter = new HashMap<>(); // for private rooms
+    public final Map<String, String> hosts = new HashMap<>();
+    public final List<ChatNachricht> chatHistory = new ArrayList<>();
+    public final Map<String, List<ChatNachricht>> roomMessages = new HashMap<>();
+    public final Map<String, Long> lastHeartbeats = new HashMap<>();
+    public static final Path DATA_PATH;
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static final Type ACCOUNT_LIST_TYPE = new TypeToken<List<Account>>() {}.getType();
+    private final List<Karte> karten;
+    private Farbe farbe;
+    private Rang rang;
+    private String id;
+    private static final Map<Pair<Rang, Farbe>, Integer> normalPoints = new HashMap<>();
+    private static final Map<Rang , Integer> trumpPoints = new HashMap<>();
+    private static final Map<Rang, Integer> obenabePoints = new HashMap<>();
+    private static final Map<Rang, Integer> undenufePoints = new HashMap<>();
+    private final String spielraumName;
+    private List<Spieler> spielerListe;
+    private final Stich stich;
+    private final Map<Spieler, List<Karte>> gespielteStiche;
+    private boolean aktiv;
+    private int aktuellerSpielerIndex;
+    private Farbe trumpSuit;
+    private boolean isObenabe;
+    private boolean isUndenufe;
+    private Karte lastCard;
+    private String gameMode;
+    private Spieler letzterStichGewinner;
+    private int letzterStichPunkte;
+    private final Map<Spieler, List<Stich>> sticheVonGewinnern;
+    Spieler winner;
+    private List<Karte> currentValidMoves = new ArrayList<>();
+    final Map<Spieler, Karte> pushedCards;
+    Boolean isPushCardTrick;
+    private Boolean playerHas7WinPoints;
+    private final String name;
+    private final List<Karte> handkarten;
+    private int punkte;
+    private int winPoint;
+    private boolean amZug;
+    private final boolean isBot;
+    private final List<Karte> validMoves;
+    private final LinkedHashMap<Spieler, Karte> cardsInTrick;
+    private final Spieler spieler;
+    private int punkte;
+    private final String name;
+    private final String passwort;
+    private final String hostSpieler;
+    private final List<String> teilnehmer = new ArrayList<>();
+    private final List<String> bots;
+    private final List<String> chatverlauf;
+    private String username;
+    private int games;
+    private int wins;
+    private static Timer heartbeatTimer;
+    private final Spielverwaltung game;
+    private final String localPlayer;
+    private final String roomName;
+    private final Map<String, PlayerModel> playerModels = new HashMap<>();
+    private final StichModel stich;
+    private GameBoardController gameBoardController;
+    private boolean gameEnded = false;
+    private Integer gameOverCounter;
+    private final String name;
+    private final IntegerProperty score = new SimpleIntegerProperty();
+    private final ListProperty<String> hand = new SimpleListProperty<>(FXCollections.observableArrayList());
+    private final BooleanProperty isMyTurn = new SimpleBooleanProperty();
+    private final IntegerProperty winPoints = new SimpleIntegerProperty();
+    private final List<String> validCard = new ArrayList<>();
+    private final SimpleStringProperty room_name;
+    private final SimpleStringProperty player_1;
+    private final SimpleStringProperty player_2;
+    private final SimpleStringProperty player_3;
+
+
+

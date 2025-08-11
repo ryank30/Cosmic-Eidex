@@ -1,0 +1,64 @@
+
+\section{Produktdaten}\label{section:productdaten}
+
+Hier sollen die Daten genannt werden, die im System verwendet werden.
+
+\newcounter{ld}\setcounter{ld}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{ld}{LD}{daten:benutzername}
+		\item [Name:] Benutzername*\footnote{``*'' bedeutet hier, dass die Daten in der Datenbank zu speichern sind}
+		\item [Fachliche Beschreibung:] Benutzername des Spielers
+		\item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:zugriff}
+	\end{lhp}
+	
+	\begin{lhp}{ld}{LD}{daten:passwort}
+		\item [Name:] Passwort*
+		\item [Fachliche Beschreibung:] Passwort des Spielers
+		\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\end{lhp}
+    
+	\begin{lhp}{ld}{LD}{daten:gw_punkte}
+		\item [Name:] Gewinnpunkte im Spiel
+		\item [Fachliche Beschreibung:] Gewinnpunkte eines Spielers während er das Spiel spielt
+		\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:siege}
+		\item [Name:] Siege*
+		\item [Fachliche Beschreibung:] Insgesamte Anzahl der Siege die ein Spieler hat.
+		\item [Relevante Systemfunktionen:] \ref{funk:bestenliste}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:gamestate}
+		\item [Name:] Spielzustand
+		\item [Fachliche Beschreibung:] Spielrelevante Daten über die Anzahl der Karten auf der Hand jedes Spielers etc.
+		\item [Relevante Systemfunktionen:] \ref{funk:spielverw} \ref{funk:bots}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:msg}
+		\item [Name:] Chatnachricht
+		\item [Fachliche Beschreibung:] Der Inhalt einer Nachricht die ein Spieler im Chat verschickt hat oder verschicken will.
+		\item [Relevante Systemfunktionen:] \ref{funk:chat}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:gameroom_name}
+		\item [Name:] Spielraumname*
+		\item [Fachliche Beschreibung:] Der einzigeartige Name eines Spielraumes
+		\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:gameroom_password}
+		\item [Name:] Spielraumpasswort*
+		\item [Fachliche Beschreibung:] Das Passwort eines Spielraumes.
+		\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:gameroom_pop}
+		\item [Name:] Spielraumfüllung*
+		\item [Fachliche Beschreibung:] Die Anzahl der Spieler in einem Spielraum.
+		\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\end{lhp}
+
+\end{description}

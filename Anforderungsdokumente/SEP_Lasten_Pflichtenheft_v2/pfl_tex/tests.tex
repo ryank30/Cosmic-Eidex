@@ -1,0 +1,99 @@
+\chapter{Systemtestfälle}
+
+\newcounter{tf}\setcounter{tf}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+
+\begin{lhp}{tf}{TF}{tests:anmelden}
+	\item [Name:] Spieler anmelden.
+	\item [Motivation:] Testet, ob die Anmeldung in das System korrekt funktioniert.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\ $\implies$ Spieler wird in die Lobby bewegt.
+			\item \textit{Benutzername ist registriert, Passwort ist falsch} \\ $\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzername ist nicht registriert} \\ $\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:anmeld}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:löschen}
+	\item [Name:] Spieler löschen
+	\item [Motivation:] Testet, ob die authentifizierte 
+          Spieler selbst  sein Konto löschen kann.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spieler ist eingeloggt und bestätigt die Löschung mit korrektem Passwort} \\ $\implies$ Konto wird gelöscht, Spieler wird ausgeloggt und zur Startseite weitergeleitet.
+			\item \textit{ Spieler ist eingeloggt, gibt aber ein falsches Passwort zur Bestätigung ein} \\ $\implies$ Fehlermeldung wird angezeigt, Konto bleibt bestehen.
+			\item \textit{Spieler ist nicht eingeloggt und ruft die „Konto löschen“-Funktion auf} \\ $\implies$ Fehlermeldung oder Weiterleitung zum Login.
+            \item \textit{Spieler erhält eine Bestätigungs-E-Mail über die erfolgreiche Löschung.} \\ $\implies$ E-Mail wird korrekt versendet, enthält Informationen zur Datenlöschung.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\item [Relevante Use Cases:] \ref{uc:löschen}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:hinzufügen}
+	\item [Name:] Spieler zum Spielraum hinzufügen
+	\item [Motivation:] Testen, ob das Hinzufügen eines Spielers in einem Spielraum erfolgreich ist. 
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Raum hat freien Platz} \\ $\implies$ Spieler kann im Raum hinzugefügt werden.
+            \item \textit{Der Raum ist voll} \\ $\implies$  Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:spielerlobbyhinzufuegen}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:bot}
+	\item [Name:] Bot hinzufügen
+	\item [Motivation:] Testen, ob Bots in Spielräumen hinzugefügt wurden. 
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Raum hat freien Platz} \\ $\implies$ Bot wird im Raum hinzugefügt.
+            \item \textit{Der Raum ist voll} \\ $\implies$  Fehlermeldung wird angezeigt.
+            \item \textit{Der Spieler, der den Bot hinzufügen möchte, ist nicht der Host} \\ $\implies$  Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:bots}
+	\item [Relevante Use Cases:] \ref{uc:botersetzen}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:bot}
+	\item [Name:]Starten eines Spiels.
+	\item [Motivation:] Testen, ob ein Spiel gestartet werden kann. 
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Es gibt eine ausreichende Anzahl von Spielern im Spielraum} \\ $\implies$ Das Spiel wurde erfolgreich gestartet
+            \item \textit{Die Anzahl der Spieler im Spielraum ist nicht ausreichend} \\ $\implies$  Das Spiel startet nicht.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:spielbeginnen}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:ausfuehren}
+	\item [Name:] Spielzug ausgeführt.
+	\item [Motivation:] Testen, ob ein Spielzug gut ausgeführt wird 
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Der Spieler führt einen Zug aus, der mit den Regeln übereinstimmt} \\ $\implies$ Der nächste Spieler ist nun am Zug
+            \item \textit{Der Spieler macht einen Zug, der nicht mit den Regeln übereinstimmt} \\ $\implies$  Fehlermeldung wird angezeigt.
+            \end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw}
+	\item [Relevante Use Cases:] \ref{uc:spielzugausfuehren}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:aktualisieren}
+	\item [Name:]Bestenliste.
+	\item [Motivation:] Testen, ob die Bestenliste den Punktestand anzeigt und auch nach dem Ende eines Spiels aktualisiert wird.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Das Spiel ist vorbei} \\ $\implies$ Die Bestenliste aktualisiert den Punktestand.
+            \item \textit{Es wurde noch kein Spiel gespielt} \\ $\implies$  Meldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:bestenliste}
+	\item [Relevante Use Cases:] \ref{uc:bestenlisteanzeigen}
+\end{lhp}
+\begin{lhp}{tf}{TF}{tests:aktualisieren}
+	\item [Name:]Schreiben im Chat.
+	\item [Motivation:] Testen, ob ein Spieler eine Nachricht im Chat senden kann.  
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+        \item \textit{Der Spieler sendet eine Nachricht} \\ $\implies$ Die Nachricht wird von anderen Spielern gesehen.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:chat}
+	\item [Relevante Use Cases:] \ref{uc:chatnachricht}
+\end{lhp}
+\end{description}

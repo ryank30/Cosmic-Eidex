@@ -1,0 +1,58 @@
+\chapter{Funktionale Anforderungen}
+
+%\section{Systemkontext}
+
+\section{Systemfunktionen}
+
+\newcounter{pfc}\setcounter{pfc}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{pfc}{LF}{funk:spielverw}
+		\item [Name:] Spielverwaltung
+		\item [Beschreibung:] Das System verwaltet das von mehreren Spielern geteiltes Spiel in einem Spielraum. Das Spiel erfolgt nach den Spielregeln.
+	\end{lhp}
+    
+	\begin{lhp}{pfc}{LF}{funk:regelprüf}
+		\item [Name:] Regelprüfung
+		\item [Beschreibung:] Das System prüft ob die Regeln in dem angepeiltem Zug eingehalten werden. Dies umfasst die Bedienpflicht, Trumpfregeln, Charakterregeln.
+	\end{lhp}
+
+	\begin{lhp}{pfc}{LF}{funk:stichverw}
+		\item [Name:] Stichverwaltung
+		\item [Beschreibung:] Das System verwaltet die Stiche, es handlet die Karten und wechselt gegebenenfalls den Status.
+	\end{lhp}
+
+	\begin{lhp}{pfc}{LF}{funk:chareffdispatch}
+		\item [Name:] Character-Effekt-Dispatcher
+		\item [Beschreibung:] Das System führt die Charaktereffekte aus.
+	\end{lhp}
+    
+	\begin{lhp}{pfc}{LF}{funk:zugriff}
+		\item [Name:] Zugriffsverwaltung
+		\item [Beschreibung:] Das System verwaltet den Zugang zum Spiel anhand Benutzerdaten. Spieler können sich registrieren, anmelden, abmelden sowie ihre Kontos löschen.
+	\end{lhp}
+
+	\begin{lhp}{pfc}{LF}{funk:spielraum}
+		\item [Name:] Verwaltung der Spielräume
+		\item [Beschreibung:] Das System verwaltet die Erstellung, Änderung und Löschung der Spielräume.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:bestenliste}
+		\item [Name:] Bestenliste
+		\item [Beschreibung:] Die Anzahl der gewonnen Spiele aller Spieler anzeigen.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:bots}
+		\item [Name:] Intelligente Bots
+		\item [Beschreibung:] Das System verwaltet die Aktionen der Bots mithilfe vordefinierter Entscheidungsalgorithmen und der Bot kann während der Laufzeit nicht selbstständig lernen.
+	\end{lhp}
+	
+	\begin{lhp}{pfc}{LF}{funk:chat}
+		\item [Name:] Chat
+		\item [Beschreibung:] Spieler können in Echtzeit miteinander interagieren und chatten und auch an einem Spiel teilnehmen.
+	\end{lhp}
+
+\end{description}
+
+

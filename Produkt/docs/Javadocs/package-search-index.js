@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"account"},{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"api"},{"l":"app"},{"l":"chat"},{"l":"controllers"},{"l":"dto"},{"l":"exceptions"},{"l":"mapper"},{"l":"models"},{"l":"server"},{"l":"server.impl"},{"l":"spiel"},{"l":"spielraum"},{"l":"util"}];updateSearchResults();

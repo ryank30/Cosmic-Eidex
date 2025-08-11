@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditController">
+   <children>
+      <PasswordField fx:id="repeat_password" layoutX="46.0" layoutY="127.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="195.0" promptText="Neues Passwort bestätigen" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="359.0" />
+      <TextField fx:id="new_username" layoutX="46.0" layoutY="52.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="195.0" promptText="Neuer Nutzername" AnchorPane.bottomAnchor="306.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="359.0" />
+      <Button fx:id="save_button" layoutX="144.0" layoutY="292.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#save_handle" prefHeight="49.0" prefWidth="118.0" text="Speichern" AnchorPane.bottomAnchor="59.0" />
+      <Button fx:id="cancel_button" layoutX="367.0" layoutY="292.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancel_handle" prefHeight="49.0" prefWidth="118.0" text="Canceln" AnchorPane.bottomAnchor="59.0" />
+      <PasswordField fx:id="new_password" layoutX="47.0" layoutY="127.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="195.0" promptText="Neues Passwort" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="358.0" />
+      <TextField fx:id="error_field" layoutX="220.0" layoutY="353.0" visible="false" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.5" AnchorPane.topAnchor="353.0" />
+   </children>
+</AnchorPane>

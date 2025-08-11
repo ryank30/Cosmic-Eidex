@@ -1,0 +1,86 @@
+\subsection{Data-Dictionary}
+
+\paragraph{Fachlich-Bedingte Daten}
+
+\begin{itemize}
+\item[\ref{daten:benutzername}] Benutzername* = string
+\item[\ref{daten:passwort}] Passwort* = string
+\item[\ref{daten:gw_punkte}] Gewinnpunkte im Spiel = integer
+\item[\ref{daten:siege}] Siege* = integer
+\item[\ref{daten:gamestate}] Spielzustand = object
+\item[\ref{daten:msg}] Chatnachricht = string
+\item[\ref{daten:gameroom_name}] Spielraumname* = string
+\item[\ref{daten:gameroom_password}] Spielraumpasswort* = string
+\item[\ref{daten:gameroom_pop}] Spielraumfüllung* = integer
+\end{itemize}
+
+\paragraph{Technisch-Bedingte Daten}
+
+\newcounter{pd}\setcounter{pd}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+\begin{lhp}{pd}{PD}{datadict:benutzername}
+\item [Name:] Zugriffsdaten*
+\item [Motivation:] Vereinfachung von Classendiagramm (wirklich so?) sowie Vereinfachung von Anforderungen und Dokumentation.
+\item [Data-Dictionary Ausdruck]: Zugriffsdaten = Benutzername + Passwort
+\item [Relevante Systemfunktionen:]  \ref{funk:spielverw}, \ref{funk:zugriff}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:gameinfo}
+    \item [Name:] Spielinformation
+    \item [Motivation:] Zusammenfassung von Spielraumname, Spielraumpasswort und Spielraumfüllung zur besseren Übersicht
+    \item [Data-Dictionary Ausdruck]: Spielinformation = Spielraumname + Spielraumpasswort + Spielraumfüllung
+    \item [Relevante Systemfunktionen:]  \ref{funk:spielraum}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:spielstatus}
+    \item [Name:] Spielstatus
+    \item [Motivation:] Vereinheitlichung von spielbezogenen Daten
+    \item [Data-Dictionary Ausdruck]: Spielstatus = Spielzustand + Gewinnpunkte
+    \item [Relevante Systemfunktionen:]  \ref{funk:spielverw}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:chatinfo}
+    \item [Name:] Chatinformationen
+    \item [Motivation:] Zusammenfassung von Nachrichten für Chatverwaltung
+    \item [Data-Dictionary Ausdruck]: Chatinformationen = Chatnachricht
+    \item [Relevante Systemfunktionen:]  \ref{funk:chat}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:handkarten}
+    \item [Name:] HandkartenInformation
+    \item [Motivation:] Die Anzahl der Handkarten eines Spielers soll separat erfasst werden, um Spielverlauf korrekt zu steuern.
+    \item [Data-Dictionary Ausdruck:] HandkartenInformation = handkartenAnzahl
+    \item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:bots}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:trumpf}
+    \item [Name:] TrumpfInformation
+    \item [Motivation:] Die momentan gültige Trumpffarbe soll zentral gespeichert werden, um Regeln korrekt anzuwenden.
+    \item [Data-Dictionary Ausdruck:] TrumpfInformation = trumpfFarbe
+    \item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:spielraum}, \ref{funk:bots}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:stich}
+    \item [Name:] StichInformation
+    \item [Motivation:] Die aktuell gespielten Karten im Stich sollen einheitlich verwaltet werden, um den Gewinner zu ermitteln.
+    \item [Data-Dictionary Ausdruck:] StichInformation = aktuellerStich
+    \item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:bots}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:druecker}
+    \item [Name:] DrueckerPunkteInformation
+    \item [Motivation:] Die verdeckten Karten und ihre Punkte sollen separat gespeichert werden, um die Endwertung zu ermöglichen.
+    \item [Data-Dictionary Ausdruck:] DrueckerPunkteInformation = drueckerPunkte
+    \item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:bestenliste}, \ref{funk:bots}
+\end{lhp}
+
+\begin{lhp}{pd}{PD}{datadict:spezialfaehigkeit}
+    \item [Name:] SpezialfaehigkeitInformation
+    \item [Motivation:] Die Spezialfähigkeit des Spielers soll eindeutig zugewiesen und bei Spielentscheidungen berücksichtigt werden.
+    \item [Data-Dictionary Ausdruck:] SpezialfaehigkeitInformation = cosmicCharacter
+    \item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:bots}, \ref{funk:chat}
+\end{lhp}
+
+\end{description}
+

@@ -1,0 +1,102 @@
+\chapter{Projektbeschränkungen}
+
+\section{Beschränkungen}
+
+\newcounter{lb}\setcounter{lb}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{lb}{LB}{beschr:lehrbots}
+		\item [Name:] Selbstlehrende Bots
+		\item [Beschreibung:] Keine Selbstlehrfunktion von Bots wird implementiert.
+		\item [Motivation:] Die Funktionalität ist zu aufwändig zu implementieren und passt deshalb nicht in das Zeitbudget.
+		\item [Erfüllungskriterium:] Intelligenzalgorithmus von Bots ist so vorprogrammiert, dass sie Entscheidungen nur anhand des vorprogrammierten Wissens sowie des aktuellen Spielstands treffen, ohne dabei frühere Spiele zu berücksichtigen.
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:anwendungsbereich}
+		\item [Name:] Anwendungsbereich
+		\item [Beschreibung:] Das System ist ausschließlich für den privaten Bereich ausgelegt.
+		\item [Motivation:] Die Wartung ist teuer
+		\item [Erfüllungskriterium:] Benutzer- und Spieldaten sollten unsere aktuelle Serverkapazität nicht überschreiten
+	\end{lhp}
+	
+		
+	\begin{lhp}{lb}{LB}{beschr:implsprache}
+		\item [Name:] Implementierungssprache
+		\item [Beschreibung:] Für die Implementierung ist ausschließlich Java 8 oder höher zu verwenden.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Es sollte eine Version von Java 8 oder höher verwendet werden
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:gui}
+		\item [Name:] GUI-Framework
+		\item [Beschreibung:] Die GUI ist mit JavaFX zu realisieren.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Alle GUIs sollten mit JavaFX entwickelt werden
+	\end{lhp}
+	
+	\begin{lhp}{lb}{LB}{beschr:gitlab}
+		\item [Name:] Gitlab
+		\item [Beschreibung:] Für die Entwicklung ist das vorgegebene GitLab-Repository zu verwenden.
+		\item [Motivation:] Das optimiert die Betreuung vom SEP und koordiniert die Mitarbeit.
+		\item [Erfüllungskriterium:] Der gesamte Projektcode und die Dokumentation werden zur besseren Beurteilung auf Gitlab hochgeladen
+	\end{lhp}
+	
+	
+\end{description}
+
+\section{Glossar}
+
+\begin{center}
+		\rowcolors{2}{Gray!15}{White}
+		\begin{longtable}{p{0.25\textwidth} p{0.25\textwidth} p{0.4\textwidth}}
+			\textbf{Deutsch} & \textbf{Englisch} & \textbf{Bedeutung} \\
+			\hline \hline \endhead                      
+			Bot & bot & Spieler, dessen Spielaktionen vom Computer entschieden und durchgeführt werden\\
+			Kekse & Cookies & Offiziell keine gültige Maßnahme zur Bestechung der HiWis\\          
+ 			Lobby & lobby & Virtueller Raum zum Betreten eines Spielraums\\	
+			Spiel (Regelwerk) & game & Cosmic Eidex \\
+			Spieler & player & Teilnehmer am Spielgeschehen\\
+			Spielraum & game room & Virtueller Raum, in dem ein Spiel stattfindet\\
+			Zug & turn & Zustand in dem ein Spieler eine Spielaktion ausführen muss\\
+            Bestenliste & leaderboard & Zeigt den Punktestand aller Spieler an\\
+            Karten & cards & Spielkarten, die im Spiel verwendet werden\\
+            Trumpf & trump & Die spezielle Kartenfarbe (z. B. Herz), die alle anderen Farben in einem Stich übertrumpft. Die Trumpffarbe wird zu Beginn eines Stichs aufgedeckt, wenn eine Karte abgelegt wird.\\
+            Cosmic Charaktere & cosmic characters & Charakter auf der Karte, der dem Spieler besondere Kräfte verleiht, die einmal pro Runde eingesetzt werden \\
+            Drücker & buried card & Eine Karte, die nicht gespielt wird und dem Spieler, der sie versteckt hat, Punkte einbringt\\
+            Match & match & Ein Spieler, der jeden Stich in der Hand gewinnt \\ 
+            Stich & trick & eine Spielrunde\\
+            Deck & deck & Satz von 36 Karten(Herz(rot), Eidex(grün), Raben(schwarz), Sterne(gelb))\\
+            
+		\end{longtable}
+\end{center}
+
+\section{Relevante Fakten und Annahmen}
+
+Wichtige bekannte Fakten und getroffene Annahmen, die sich auf das Projekt direkt oder indirekt beziehen und dadruch auf die zukünftige Implementierungsentscheidungen Effekt haben können.
+
+\newcounter{fa}\setcounter{fa}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{fa}{FA}{fa:fortentwicklung}
+		\item [Name:] Keine Fortentwicklung der App nach dem SEP.
+		\item [Beschreibung:] Nach Ende des SEP wird das Projekt nicht weiterentwickelt.
+		\item [Motivation:] Das Entwicklungsteam hat keine Lust darauf.
+	\end{lhp}
+	
+	\begin{lhp}{fa}{FA}{fa:recht}
+		\item [Name:] Keine Lizenzen für Spielartefakte.
+		\item [Beschreibung:] Weder die TU Kaiserslautern noch das Spielwerk + die Freizeit GmbH gewahren dem Entwicklungsteam die Rechte für die Spielartefakte.
+		\item [Motivation:] Rechtliche Vorsorge.
+	\end{lhp}
+	
+	\begin{lhp}{fa}{FA}{fa:recht-vergangenheit}
+		\item [Name:] Keine bekannte Nachteile von Verwendung von Spielartefakten.
+		\item [Beschreibung:] Es ist nicht bekannt, dass die SEP-Teilnehmer der letzten Jahre irgendwelche rechtlichen Probleme dadurch gehabt haben, dass sie die Spielartefakten vom Spielwerk + der Freizeit GmbH im Rahmen des SEP eingesetzt haben.
+		\item [Motivation:] Rechtliche Vorsorge.
+	\end{lhp}
+	
+	
+\end{description}
+
